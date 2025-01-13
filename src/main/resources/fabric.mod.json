@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "pathogens",
+	"version": "${version}",
+	"name": "Pathogenic Contamination",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+
+	},
+	"license": "All Rights Reserved",
+	"icon": "assets/pathogens/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "com.yeetdot.pathogens.Pathogens"
+		],
+		"fabric-datagen": [
+			"com.yeetdot.pathogens.PathogensDataGenerator"
+		],
+		"client": [
+			"com.yeetdot.pathogens.PathogensClient"
+		]
+	},
+	"mixins": [
+		"pathogens.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

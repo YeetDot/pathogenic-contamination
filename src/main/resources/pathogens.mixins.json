@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.yeetdot.pathogens.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ExampleMixin",
+    "ItemsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

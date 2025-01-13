@@ -1,0 +1,7 @@
+{
+  "item.pathogens.cyanide": "Cyanide",
+  "itemgroup.pathogens.pathogens_item_group": "Pathogenic Contamination",
+
+  "effect.pathogens.anaerobic_metabolism": "Anaerobic Metabolism",
+  "effect.pathogens.cyanide_poisoning": "Cyanide Poisoning"
+}
