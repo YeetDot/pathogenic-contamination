@@ -13,5 +13,7 @@ public class ModConsumableComponents {
             List.of(new StatusEffectInstance(ModStatusEffects.ANAEROBIC_METABOLISM, 12000), new StatusEffectInstance(ModStatusEffects.CYANIDE_POISONING, 12000))
     )).build();
 
-    public static void registerModConsumableComponents() {}
+    public static final ConsumableComponent STILL_WATER = ConsumableComponents.drink().consumeEffect(new ApplyEffectsConsumeEffect(
+            List.of(new StatusEffectInstance(ModStatusEffects.ANAEROBIC_METABOLISM, 12000), new StatusEffectInstance(ModStatusEffects.DIARRHEA, 12000))
+    )).build();
 }

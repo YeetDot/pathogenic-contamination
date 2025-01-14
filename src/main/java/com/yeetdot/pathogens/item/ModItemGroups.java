@@ -1,6 +1,7 @@
 package com.yeetdot.pathogens.item;
 
 import com.yeetdot.pathogens.Pathogens;
+import com.yeetdot.pathogens.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -15,6 +16,8 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.CYANIDE))
                     .entries(((displayContext, entries) -> {
                         entries.add(ModItems.CYANIDE);
+                        entries.add(ModItems.STILL_WATER_BUCKET);
+                        entries.add(ModBlocks.TILE);
                     }))
             .build());
 

@@ -3,10 +3,11 @@
   "package": "com.yeetdot.pathogens.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ExampleMixin",
-    "ItemsMixin"
+    "EntityMixin",
+    "ItemsMixin",
+    "LivingEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-	}
+  }
 }

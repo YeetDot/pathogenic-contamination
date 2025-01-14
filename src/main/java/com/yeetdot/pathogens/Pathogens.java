@@ -5,6 +5,7 @@ import com.yeetdot.pathogens.entity.effect.ModStatusEffects;
 import com.yeetdot.pathogens.item.ModConsumableComponents;
 import com.yeetdot.pathogens.item.ModItemGroups;
 import com.yeetdot.pathogens.item.ModItems;
+import com.yeetdot.pathogens.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,7 +20,7 @@ public class Pathogens implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
 		ModStatusEffects.registerModStatusEffects();
-		ModConsumableComponents.registerModConsumableComponents();
 		ModBlocks.registerModBlocks();
+		ModWorldGeneration.generateModWorldGen();
 	}
 }

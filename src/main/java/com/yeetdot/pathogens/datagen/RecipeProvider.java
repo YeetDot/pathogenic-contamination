@@ -25,6 +25,6 @@ public class RecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "";
+        return "recipe_provider";
     }
 }

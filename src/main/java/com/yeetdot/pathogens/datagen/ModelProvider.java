@@ -1,5 +1,6 @@
 package com.yeetdot.pathogens.datagen;
 
+import com.yeetdot.pathogens.block.ModBlocks;
 import com.yeetdot.pathogens.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -14,11 +15,12 @@ public class ModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+        blockStateModelGenerator.registerBuiltin(ModBlocks.TILE);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CYANIDE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STILL_WATER_BUCKET, Models.GENERATED);
     }
 }
