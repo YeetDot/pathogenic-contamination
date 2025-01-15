@@ -1,25 +1,24 @@
 package com.yeetdot.pathogens.mixin;
 
-import com.yeetdot.pathogens.block.ModBlocks;
 import com.yeetdot.pathogens.entity.effect.ModStatusEffects;
-import net.minecraft.block.BlockState;
+import com.yeetdot.pathogens.util.ModTags;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends EntityMixin {
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect);
 
-    @Override
-    protected void onBlockCollision(BlockState state) {
-        if (state.getBlock() == ModBlocks.STILL_WATER) {
-            this.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ANAEROBIC_METABOLISM, 1000));
-            this.addStatusEffect(new StatusEffectInstance(ModStatusEffects.DIARRHEA, 1000));
+    @Inject(at = @At("HEAD"), method = "baseTick")
+    private void stillWaterEffect(CallbackInfo ci) {
+        if (pathogenic_contamination$isTouchingFluid(ModTags.Fluids.STILL_WATER)) {
+            this.addStatusEffect(new StatusEffectInstance(ModStatusEffects.ANAEROBIC_METABOLISM, 1200));
+            this.addStatusEffect(new StatusEffectInstance(ModStatusEffects.DIARRHEA, 1200));
         }
     }
-
-
 }

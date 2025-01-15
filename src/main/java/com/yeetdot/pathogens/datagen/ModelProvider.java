@@ -22,5 +22,8 @@ public class ModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CYANIDE, Models.GENERATED);
         itemModelGenerator.register(ModItems.STILL_WATER_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CEREMONIAL_DAGGER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STILL_WATER_BOTTLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLOOD_BOTTLE, Models.GENERATED);
     }
 }
